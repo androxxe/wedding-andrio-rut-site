@@ -8,11 +8,18 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky",
-    "test": "echo \"No Unit Test yet\""
+    "test": "echo \"No Unit Test yet\"",
+    "check:prettier": "prettier --config .prettierrc ./src/ --check",
+    "format:prettier": "prettier --config .prettierrc ./src/ --write",
+    "format:lint": "eslint --fix ./src/ --ext .js,.jsx,.ts,.tsx",
+    "formatter": "yarn format:lint && yarn format:prettier"
   },
   "engines": {
     "node": ">=18",
     "yarn": "^1.22 <=2.*"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
     "next": "14.1.0",
@@ -29,7 +36,9 @@
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
     "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "postcss": "^8",
+    "prettier": "3.2.5",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
   }

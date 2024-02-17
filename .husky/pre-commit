@@ -1,1 +1,3 @@
 yarn test
+yarn formatter
+npx lint-staged
