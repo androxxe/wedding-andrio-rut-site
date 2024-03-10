@@ -6,7 +6,7 @@ export default function TechLayout({ children }: { children: JSX.Element }) {
       <div className="bg-neutral-950 h-full rounded-md flex flex-col">
         <div className="flex flex-1 overflow-y-auto">
           <Sidebar />
-          <div className="p-5">{children}</div>
+          <div className="p-5 w-full h-full overflow-y-auto">{children}</div>
         </div>
         <Footer />
       </div>
