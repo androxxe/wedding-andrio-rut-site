@@ -1,13 +1,12 @@
 "use client";
 
-import Test from "@/components/tech/mdx/test.mdx";
+import { Section1, Section2 } from "@/components/tech/mdx";
 
 export default function Tech() {
   return (
-    <div>
-      <div className="text-white">
-        <Test />
-      </div>
+    <div className="text-white">
+      <Section1 />
+      <Section2 />
     </div>
   );
 }
