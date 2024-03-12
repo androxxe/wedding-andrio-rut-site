@@ -5,7 +5,7 @@ const Pre = (props: React.PropsWithChildren<{}>) => {
   const { children, ...rest } = props;
 
   return (
-    <div className="mt-1 mb-5 p-5 overflow-x-auto" {...rest}>
+    <div className="mt-1 mb-5 p-5 overflow-x-auto rounded-md" {...rest}>
       <pre className=" flex flex-1 w-full">{children}</pre>
     </div>
   );
