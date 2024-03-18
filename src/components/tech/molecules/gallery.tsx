@@ -12,7 +12,7 @@ export const Gallery = () => {
   return (
     <div className="mb-6">
       <MdxGallery />
-      <CodingPreview Mdx={MdxGalleryImages}>
+      <CodingPreview Mdx={MdxCodeGalleryImages}>
         <ReactGridGallery
           images={GALLERY_IMAGES}
           onClick={(index) => setIndex(index)}
