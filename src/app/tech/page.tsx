@@ -1,13 +1,14 @@
 "use client";
 
 import { MdxSection1, MdxSection2 } from "@/components/tech/mdx";
-import { Gallery } from "@/components/tech/molecules";
+import { Gallery, Wishes } from "@/components/tech/molecules";
 
 export default function Tech() {
   return (
     <div className="text-white">
       <MdxSection1 />
       <Gallery />
+      <Wishes />
       <MdxSection2 />
       <div className="mt-12">
         <p className="text-sm text-slate-400">
