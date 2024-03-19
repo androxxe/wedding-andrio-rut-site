@@ -9,7 +9,12 @@ export async function GET(request: NextRequest) {
 
   const wishes = await prisma.wishes.findMany({
     take: limit,
-    skip: (page - 1) * limit
+    skip: (page - 1) * limit,
+    orderBy: [
+      {
+        created_at: "desc"
+      }
+    ]
   });
 
   return Response.json({
@@ -18,7 +23,8 @@ export async function GET(request: NextRequest) {
     data: wishes,
     meta: {
       page,
-      limit
+      limit,
+      total: await prisma.wishes.count()
     }
   });
 }

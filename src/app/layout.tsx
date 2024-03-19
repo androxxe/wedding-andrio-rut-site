@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ResponsiveIndicator } from "@/components/general/responsive-indicator";
+import { Provider } from "./provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={cn(inter.className, "antialiased")}>
-        {children}
+        <Provider>{children}</Provider>
         <ResponsiveIndicator />
       </body>
     </html>
