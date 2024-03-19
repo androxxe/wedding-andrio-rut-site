@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function TechLayout({ children }: { children: JSX.Element }) {
   return (
-    <div className="bg-slate-900 h-screen px-10 py-7 scroll-smooth">
+    <div className="bg-slate-900 h-screen px-2 lg:px-10 py-2 lg:py-7 scroll-smooth">
       <div className="bg-slate-950 h-full rounded-md flex flex-col">
         <div className="flex flex-1 overflow-y-auto">
           <Sidebar />
