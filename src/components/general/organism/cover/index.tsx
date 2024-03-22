@@ -23,7 +23,7 @@ export const Cover = (props: CoverProps) => {
   return (
     <div
       className={cn(
-        "h-screen flex flex-col bg-[url(/images/theme/general/main-pattern.jpg)] bg-[length:16rem_16rem] absolute top-0 left-0 w-full",
+        "h-screen flex flex-col bg-[url(/images/theme/general/main-pattern.jpg)] bg-[length:16rem_16rem] absolute top-0 left-0 w-full z-50",
         isOpen ? "hidden-animation" : ""
       )}
     >
