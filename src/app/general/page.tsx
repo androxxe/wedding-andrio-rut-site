@@ -1,3 +1,9 @@
+import { Cover } from "@/components/general/organism";
+
 export default function Batak() {
-  return <div>Batak</div>;
+  return (
+    <div>
+      <Cover />
+    </div>
+  );
 }
