@@ -37,8 +37,14 @@ const Menu = (props: MenuProps) => {
     </div>
   );
 };
-export const BottomTab = () => {
-  const [activeIndex, setActiveIndex] = useState<number>(0);
+
+interface BottomTabProps {
+  activeIndex: number;
+  setActiveIndex: (index: number) => void;
+}
+
+export const BottomTab = (props: BottomTabProps) => {
+  const { activeIndex, setActiveIndex } = props;
 
   return (
     <div className="flex w-full h-20 bg-maroon-600 space-x-4 p-2 overflow-x-auto">
