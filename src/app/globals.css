@@ -74,3 +74,17 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    top: -120%;
+    opacity: 0;
+  }
+}
+
+.hidden-animation {
+  animation: fadeOut 1s ease forwards;
+}
