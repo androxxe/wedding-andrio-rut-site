@@ -14,6 +14,21 @@ const config = {
     },
     extend: {
       colors: {
+        maroon: {
+          50: "#fdf8f6",
+          100: "#f2e8e5",
+          200: "#eaddd7",
+          300: "#e0cec7",
+          400: "rgb(210, 44, 60)",
+          500: "#bfa094",
+          600: "#a18072",
+          700: "#977669",
+          800: "#846358",
+          900: "#43302b"
+        },
+        gold: {
+          200: "rgb(231, 216, 169)"
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

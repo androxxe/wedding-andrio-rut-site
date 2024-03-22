@@ -45,9 +45,7 @@ export const Wishes = () => {
 
   const dialogRef = useRef<HTMLButtonElement>(null);
 
-  const onSubmit = (data: WishPayload) => {
-    mutateAsync(data);
-  };
+  const onSubmit = (data: WishPayload) => mutateAsync(data);
 
   const { mutateAsync } = useMutation({
     mutationKey: ["wishes"],
