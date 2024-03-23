@@ -1,7 +1,6 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { useState } from "react";
 import {
   AiOutlineHome,
   AiOutlineHeart,
@@ -79,22 +78,28 @@ export const BottomTab = (props: BottomTabProps) => {
         onClick={() => setActiveIndex(4)}
       />
       <Menu
-        title="Wishes"
-        icon={<AiOutlineComment size={24} />}
+        title="Story"
+        icon={<AiOutlineHeart size={24} />}
         isActive={activeIndex === 5}
         onClick={() => setActiveIndex(5)}
       />
       <Menu
-        title="Gift"
-        icon={<AiOutlineGift size={24} />}
+        title="Wishes"
+        icon={<AiOutlineComment size={24} />}
         isActive={activeIndex === 6}
         onClick={() => setActiveIndex(6)}
       />
       <Menu
-        title="Closing"
-        icon={<AiOutlineCheckCircle size={24} />}
+        title="Gift"
+        icon={<AiOutlineGift size={24} />}
         isActive={activeIndex === 7}
         onClick={() => setActiveIndex(7)}
+      />
+      <Menu
+        title="Closing"
+        icon={<AiOutlineCheckCircle size={24} />}
+        isActive={activeIndex === 8}
+        onClick={() => setActiveIndex(8)}
       />
     </div>
   );
