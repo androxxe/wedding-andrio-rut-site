@@ -21,6 +21,10 @@ jobs:
         with:
           node-version: 18.17.1
 
+      - name: Install dependencies
+        run: |
+          yarn install --frozen-lockfile
+
       - name: Test build project
         run: |
           yarn build
