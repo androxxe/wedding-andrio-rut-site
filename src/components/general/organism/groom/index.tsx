@@ -38,7 +38,6 @@ export const Groom = () => {
           objectFit="contain"
           objectPosition="left"
           alt="Ornament"
-          className="bg-position-left text-left"
         />
       </div>
       <div className="w-32 lg:w-40 h-32 absolute top-[38rem] lg:top-[42rem] left-12 lg:left-16 flex items-start justify-start">
@@ -48,7 +47,6 @@ export const Groom = () => {
           objectFit="contain"
           objectPosition="left"
           alt="Ornament"
-          className="bg-position-left text-left"
         />
       </div>
       <div className="w-32 h-48 absolute top-[14rem] left-0 flex items-start justify-start z-10">
@@ -58,7 +56,6 @@ export const Groom = () => {
           objectFit="contain"
           objectPosition="left"
           alt="Ornament"
-          className="bg-position-left text-left"
         />
       </div>
     </div>
