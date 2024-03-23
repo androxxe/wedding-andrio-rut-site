@@ -1,6 +1,6 @@
 "use client";
 
-import { BottomTab, Groom, Cover, Home, Bride } from "@/components/general/organism";
+import { BottomTab, Groom, Cover, Home, Bride, Event } from "@/components/general/organism";
 import { useState } from "react";
 
 export default function Batak() {
@@ -13,6 +13,7 @@ export default function Batak() {
         {activeIndex === 0 && <Home />}
         {activeIndex === 1 && <Groom />}
         {activeIndex === 2 && <Bride />}
+        {activeIndex === 3 && <Event />}
       </div>
       <BottomTab activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
     </div>

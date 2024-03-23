@@ -3,3 +3,4 @@ export * from "./bottom-tab";
 export * from "./home";
 export * from "./groom";
 export * from "./bride";
+export * from "./event";
