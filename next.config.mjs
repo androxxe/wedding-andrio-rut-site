@@ -30,7 +30,8 @@ const nextConfig = {
   experimental: {
     appDir: true
   },
-  reactStrictMode: true
+  reactStrictMode: true,
+  output: "standalone"
 };
 
 export default withMDX(nextConfig);
