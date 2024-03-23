@@ -30,7 +30,7 @@ jobs:
         run: |
           yarn build
 
-      - name: Reset Repository Just In Case If Changed
+      - name: Reset Repository & Pull Changes
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
@@ -42,16 +42,6 @@ jobs:
 
             git reset --hard
             git clean -df
-
-      - name: Pulling
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.PRIVATE_KEY }}
-          port: 22
-          script: |
-            cd ${{ secrets.DEV_DIRECTORY }}
             git pull origin development
             git status
 
