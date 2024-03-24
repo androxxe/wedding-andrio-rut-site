@@ -31,7 +31,7 @@ export const Sidebar = () => {
               <div className="border-0" key={title}>
                 <button
                   key={title}
-                  className="w-full transition-colors flex items-center gap-x-2.5 px-5 py-1 text-left"
+                  className="w-full flex items-center gap-x-2.5 px-5 py-1 text-left hover:bg-neutral-800 transition-colors"
                   onClick={(event) => {
                     event.preventDefault();
 
