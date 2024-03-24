@@ -7,3 +7,4 @@ export * from "./event";
 export * from "./gallery";
 export * from "./story";
 export * from "./wishes";
+export * from "./gift";

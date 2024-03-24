@@ -24,7 +24,7 @@ dayjs.extend(relativeTime);
 
 type WishPayload = yup.InferType<typeof wishesSchema>;
 
-export const Wishes = () => {
+export const Gift = () => {
   const form = useForm<WishPayload>({
     defaultValues: {
       name: "",
@@ -84,7 +84,7 @@ export const Wishes = () => {
         <div className="px-5 py-8 lg:py-10 flex flex-col flex-1 relative overflow-y-hidden">
           <h2 className={cn(viaodaLibre.className, "text-4xl text-center mb-4")}>Wishes</h2>
           <div className="overflow-y-auto space-y-4 flex-1">
-            {isFetching && <div className="text-center text-sm text-slate-700">Loading...</div>}
+            {isFetching && <div className="text-center text-sm text-slate-400">Loading...</div>}
             {flattenData.map((wish, index) => (
               <div key={index}>
                 <div className={cn(ebGaramond.className, "text-medium font-semibold text-maroon-700")}>{wish.name}</div>
@@ -94,16 +94,7 @@ export const Wishes = () => {
                 </div>
               </div>
             ))}
-            {!hasNextPage && <div className="text-center text-sm text-slate-700">No more wishes</div>}
-            <Button
-              onClick={() => fetchNextPage()}
-              disabled={!hasNextPage}
-              size="xs"
-              variant="outline"
-              className="bg-transparent border-maroon-700 text-maroon-700 hover:bg-transparent"
-            >
-              Load more
-            </Button>
+            {!hasNextPage && <div className="text-center text-sm text-slate-400">No more wishes</div>}
           </div>
           <div className="pt-8">
             <Dialog>
