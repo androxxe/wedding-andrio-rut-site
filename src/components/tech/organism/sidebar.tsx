@@ -11,8 +11,8 @@ export const Sidebar = () => {
           <AccordionTrigger className="border-b border-neutral-700 px-5 py-2.5 text-left">
             Documentation
           </AccordionTrigger>
-          <AccordionContent className="mt-5 space-y-1 px-5">
-            <SidebarItems />
+          <AccordionContent className="mt-5 space-y-1">
+            <SidebarItems menuClassName="px-5" />
           </AccordionContent>
         </AccordionItem>
       </Accordion>

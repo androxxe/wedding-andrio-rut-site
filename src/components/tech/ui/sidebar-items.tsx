@@ -1,13 +1,16 @@
+import { cn } from "@/lib/utils";
 import { SiTypescript } from "react-icons/si";
+import colors from "tailwindcss/colors";
 
 type SidebarType = { title: string }[];
 
 export interface SidebarItemsProps {
   onMenuClick?: () => void;
+  menuClassName?: string;
 }
 
 export const SidebarItems = (props: SidebarItemsProps) => {
-  const { onMenuClick } = props;
+  const { onMenuClick, menuClassName } = props;
 
   const sidebars: SidebarType = [
     { title: "introduction.ts" },
@@ -24,7 +27,10 @@ export const SidebarItems = (props: SidebarItemsProps) => {
     <div className="border-0" key={title}>
       <button
         key={title}
-        className="w-full flex items-center gap-x-2.5 py-1 text-left hover:bg-slate-800 transition-colors"
+        className={cn(
+          "w-full flex items-center gap-x-2.5 py-1 text-left hover:bg-slate-800 transition-colors",
+          menuClassName
+        )}
         onClick={(event) => {
           event.preventDefault();
 
@@ -33,7 +39,7 @@ export const SidebarItems = (props: SidebarItemsProps) => {
           if (onMenuClick) onMenuClick();
         }}
       >
-        <SiTypescript className="w-4 h-4 shrink-0" />
+        <SiTypescript className="w-4 h-4 shrink-0" size={12} />
         {title}
       </button>
     </div>
