@@ -70,77 +70,36 @@ export const Gift = () => {
   const flattenData = useMemo(() => data?.pages.map((page) => page.data).flat() || [], [data]);
 
   return (
-    <div className="w-full h-full flex flex-col p-3 lg:p-12 bg-[url(/images/theme/general/main-pattern.jpg)] bg-[length:16rem_16rem]">
-      <div className="bg-gold-200 h-full flex flex-col rounded-md shadow-sm">
-        <div className="relative w-full h-6">
+    <div className="w-full h-full p-3 lg:p-12 bg-[url(/images/theme/general/main-pattern.jpg)] bg-[length:16rem_16rem] flex flex-col items-center justify-center">
+      <h2 className={cn(viaodaLibre.className, "text-4xl text-center mb-4 text-gold-200 shadow-sm")}>Wedding Gift</h2>
+      <div className="mb-6">
+        <p className={cn(ebGaramond.className, "text-white text-center text-lg")}>
+          Your presence at our wedding was truly an honor. Should you wish to share your blessings digitally, our
+          account number is available for your convenience. Thank you sincerely!
+        </p>
+      </div>
+      <div className={cn(ebGaramond.className, "text-lg text-white space-y-5")}>
+        <div className="bg-gold-200 duration-100 hover:scale-105 px-10 py-4 text-maroon-700 rounded-md shadow flex flex-row items-center space-x-4">
           <Image
-            src="/images/theme/general/home-top-ulos.jpg"
-            fill
-            alt="Ulos"
-            objectFit="cover"
-            className="rounded-t-md"
+            src="/images/theme/general/bank_mandiri.webp"
+            width={50}
+            height={50}
+            objectFit="contain"
+            alt="Bank Mandiri"
           />
-        </div>
-        <div className="px-5 py-8 lg:py-10 flex flex-col flex-1 relative overflow-y-hidden">
-          <h2 className={cn(viaodaLibre.className, "text-4xl text-center mb-4")}>Wishes</h2>
-          <div className="overflow-y-auto space-y-4 flex-1">
-            {isFetching && <div className="text-center text-sm text-slate-400">Loading...</div>}
-            {flattenData.map((wish, index) => (
-              <div key={index}>
-                <div className={cn(ebGaramond.className, "text-medium font-semibold text-maroon-700")}>{wish.name}</div>
-                <div className={cn(ebGaramond.className, "text-base font-medium mb-1 text-slate-700")}>{wish.wish}</div>
-                <div className="text-xs text-slate-600">
-                  {dayjs(wish.created_at).locale("id").format("ddd, DD MMM YYYY HH:mm")}
-                </div>
-              </div>
-            ))}
-            {!hasNextPage && <div className="text-center text-sm text-slate-400">No more wishes</div>}
-          </div>
-          <div className="pt-8">
-            <Dialog>
-              <DialogTrigger className="w-full">
-                <Button onClick={() => refetch()} className="w-full bg-maroon-600 hover:bg-maroon-700 duration-100">
-                  Say Wishes
-                </Button>
-              </DialogTrigger>
-              <DialogContent>
-                <DialogHeader>
-                  <DialogTitle className="mb-5">Say Wishes</DialogTitle>
-                  <form className="space-y-5" onSubmit={form.handleSubmit(onSubmit)}>
-                    <div className="grid w-full gap-1.5">
-                      <Label htmlFor="name">Name</Label>
-                      <Input type="name" id="name" placeholder="Name" {...form.register("name")} />
-                      {form.formState.errors?.name?.message && (
-                        <span className="text-xs text-red-500">{form.formState.errors?.name?.message}</span>
-                      )}
-                    </div>
-                    <div className="grid w-full gap-1.5">
-                      <Label htmlFor="message">Wish</Label>
-                      <Textarea placeholder="Type your wish here." {...form.register("wish")} />
-                      {form.formState.errors?.name?.message && (
-                        <span className="text-xs text-red-500">{form.formState.errors?.name?.message}</span>
-                      )}
-                    </div>
-                    <div>
-                      <DialogClose ref={dialogRef}></DialogClose>
-                      <Button type="submit" className="bg-maroon-600 hover:bg-maroon-700 duration-100">
-                        Save
-                      </Button>
-                    </div>
-                  </form>
-                </DialogHeader>
-              </DialogContent>
-            </Dialog>
+          <div>
+            <span className="block text-xl font-medium">1080014605969</span>
+            <span className="block font-normal">Andrio Pratama Sirait</span>
+            <span className="block font-normal">Bank Mandiri</span>
           </div>
         </div>
-        <div className="relative w-full h-6">
-          <Image
-            src="/images/theme/general/home-top-ulos.jpg"
-            fill
-            alt="Ulos"
-            objectFit="cover"
-            className="rounded-b-md"
-          />
+        <div className="bg-gold-200 duration-100 hover:scale-105 px-10 py-4 text-maroon-700 rounded-md shadow flex flex-row items-center space-x-4">
+          <Image src="/images/theme/general/bca.png" width={50} height={50} objectFit="contain" alt="BCA" />
+          <div>
+            <span className="block text-xl font-medium">7285253306</span>
+            <span className="block font-normal">Rut Maya Sari Sihite</span>
+            <span className="block font-normal">Bank Central Asia</span>
+          </div>
         </div>
       </div>
     </div>
