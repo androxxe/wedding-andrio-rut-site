@@ -15,7 +15,7 @@ const H1 = (props: React.PropsWithChildren<{}>) => {
   const { children, ...rest } = props;
 
   return (
-    <h1 className="text-2xl flex items-center justify-start font-medium mt-16 mb-5" {...rest}>
+    <h1 className="text-2xl flex items-center justify-start font-medium mt-12 mb-5" {...rest}>
       <div className="w-6 text-red-500">#</div> {children}
     </h1>
   );
