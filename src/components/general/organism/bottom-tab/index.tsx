@@ -78,12 +78,6 @@ export const BottomTab = (props: BottomTabProps) => {
         onClick={() => setActiveIndex(4)}
       />
       <Menu
-        title="Story"
-        icon={<AiOutlineHeart size={24} />}
-        isActive={activeIndex === 5}
-        onClick={() => setActiveIndex(5)}
-      />
-      <Menu
         title="Wishes"
         icon={<AiOutlineComment size={24} />}
         isActive={activeIndex === 6}
