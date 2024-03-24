@@ -21,7 +21,7 @@ export default function Batak() {
   return (
     <div className="flex flex-col flex-1 bg-red-500 h-full overflow-y-auto">
       <div className="flex-1 overflow-y-auto">
-        <Cover isOpen />
+        <Cover />
         {activeIndex === 0 && <Home />}
         {activeIndex === 1 && <Groom />}
         {activeIndex === 2 && <Bride />}
