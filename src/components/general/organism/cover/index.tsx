@@ -11,8 +11,6 @@ interface CoverProps {
 }
 
 export const Cover = (props: CoverProps) => {
-  const AUTOPLAY_AUDIO = process.env.NEXT_PUBLIC_AUTOPLAY_AUDIO === "true";
-
   const { isOpen: isOpenProps, onOpen } = props;
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -23,10 +21,8 @@ export const Cover = (props: CoverProps) => {
     }
   }, [isOpenProps]);
 
-  console.log("AUTOPLAY_AUDIO", AUTOPLAY_AUDIO);
-
   useEffect(() => {
-    if (isOpen && AUTOPLAY_AUDIO) {
+    if (isOpen) {
       onOpen();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
