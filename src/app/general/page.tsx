@@ -10,7 +10,8 @@ import {
   Gallery,
   Story,
   Wishes,
-  Gift
+  Gift,
+  Closing
 } from "@/components/general/organism";
 import { useState } from "react";
 
@@ -29,6 +30,7 @@ export default function Batak() {
         {activeIndex === 5 && <Story />}
         {activeIndex === 6 && <Wishes />}
         {activeIndex === 7 && <Gift />}
+        {activeIndex === 8 && <Closing />}
       </div>
       <BottomTab activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
     </div>
