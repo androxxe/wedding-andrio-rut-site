@@ -7,10 +7,11 @@ import { useEffect, useState } from "react";
 
 interface CoverProps {
   isOpen?: boolean;
+  onOpen: () => void;
 }
 
 export const Cover = (props: CoverProps) => {
-  const { isOpen: isOpenProps } = props;
+  const { isOpen: isOpenProps, onOpen } = props;
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -19,6 +20,13 @@ export const Cover = (props: CoverProps) => {
       setIsOpen(true);
     }
   }, [isOpenProps]);
+
+  useEffect(() => {
+    if (isOpen) {
+      onOpen();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isOpen]);
 
   return (
     <div
