@@ -10,29 +10,11 @@ import { CodingPreview } from "../organism";
 import { Dialog, DialogClose, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "../ui/dialog";
 import { useInfiniteQuery, useMutation } from "@tanstack/react-query";
 import { useMemo, useRef } from "react";
+import { wishesSchema } from "@/yupSchemas/wishes";
+import { WishesResponse, WishesStoreResponse } from "@/interface/wishes";
+import API from "@/services/API";
 
-const schema = yup.object().shape({
-  name: yup.string().required(),
-  wish: yup.string().required()
-});
-
-type WishPayload = yup.InferType<typeof schema>;
-
-interface Wish {
-  name: string;
-  wish: string;
-  created_at: string;
-  updated_at: string;
-}
-interface WishesResponse {
-  statusCode: number;
-  data: Wish[];
-  meta: {
-    page: number;
-    limit: number;
-    total: number;
-  };
-}
+type WishPayload = yup.InferType<typeof wishesSchema>;
 
 export const Wishes = () => {
   const form = useForm<WishPayload>({
@@ -40,7 +22,7 @@ export const Wishes = () => {
       name: "",
       wish: ""
     },
-    resolver: yupResolver(schema)
+    resolver: yupResolver(wishesSchema)
   });
 
   const dialogRef = useRef<HTMLButtonElement>(null);
@@ -49,21 +31,8 @@ export const Wishes = () => {
 
   const { mutateAsync } = useMutation({
     mutationKey: ["wishes"],
-    mutationFn: async (payload: WishPayload) => {
-      const response = await fetch(`/api/wishes`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(payload)
-      });
-
-      if (!response.ok) {
-        throw new Error("Something went wrong!");
-      }
-
-      return response.json() as unknown as Wish;
-    },
+    mutationFn: async (payload: WishPayload) =>
+      await API.post<WishesStoreResponse, WishPayload>(`/api/wishes`, payload),
     onSuccess: () => {
       form.reset();
       refetch();
@@ -77,15 +46,13 @@ export const Wishes = () => {
   const { data, refetch, fetchNextPage, hasNextPage, isFetching } = useInfiniteQuery<WishesResponse>({
     queryKey: ["wishes"],
     queryFn: async ({ pageParam = 0 }) => {
-      const response = await fetch(`/api/wishes?page=${pageParam}&limit=10`, {
-        method: "GET"
-      });
+      const response = await API.get<WishesResponse>(`/api/wishes?page=${pageParam}&limit=10`);
 
-      if (!response.ok) {
-        throw new Error("Something went wrong!");
+      if (response.statusCode !== 200) {
+        throw new Error(response.message);
       }
 
-      return response.json() as unknown as WishesResponse;
+      return response;
     },
     initialPageParam: 1,
     getNextPageParam: (lastPage) =>
