@@ -16,7 +16,7 @@ import {
 import { useState } from "react";
 
 export default function Batak() {
-  const [activeIndex, setActiveIndex] = useState<number>(1);
+  const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
     <div className="flex flex-col flex-1 bg-red-500 h-full overflow-y-auto">
