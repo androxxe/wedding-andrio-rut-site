@@ -1,3 +1,59 @@
 {
-  "hello": "This his sihishdiahs"
+  "menu": {
+    "home": "Home",
+    "groom": "Groom",
+    "bride": "Bride",
+    "event": "Event",
+    "gallery": "Gallery",
+    "wishes": "Wishes",
+    "gifts": "Gifts",
+    "closing": "Closing"
+  },
+  "cover": {
+    "theWeddingOf": "The Wedding Of",
+    "dear": "Dear",
+    "openInvitation": "Open Invitation"
+  },
+  "home": {
+    "openingVerses": {
+      "content": "Then make my joy complete by being like-minded, having the same love, being one in spirit and of one mind. So they are no longer two, but one flesh. Therefore what God has joined together, let no one separate.",
+      "source": "Philippians 2: 2; Matthew 19:6"
+    }
+  },
+  "events": {
+    "saveTheDate": "Save The Date",
+    "holyMatrimony": "Holy Matrimony",
+    "holyMatrimonyDate": "Saturday, 20th Apr 2024",
+    "holyMatrimonyTime": "09:30 - 11:30 AM",
+    "holyMatrimonyVenue": "POUK Church, TS. 1 PT. RAPP",
+    "weddingReception": "Wedding Reception",
+    "weddingReceptionDate": "Saturday, 20th Apr 2024",
+    "weddingReceptionTime": "12:00 PM - End",
+    "weddingReceptionVenue": "Yeremia Multipurpose Building, Pkl. Kerinci",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds",
+    "addToCalendar": "Add to Calendar"
+  },
+  "gallery": {
+    "galleryOfLove": "Gallery of Love"
+  },
+  "wishes": {
+    "wishes": "Wishes",
+    "noMoreWishes": "No more wishes",
+    "sayWishes": "Say Wishes"
+  },
+  "gift": {
+    "weddingGift": "Wedding Gift",
+    "description": "Your presence at our wedding was truly an honor. Should you wish to share your blessings digitally, our account number is available for your convenience. Thank you sincerely!"
+  },
+  "closing": {
+    "label": "It is a joy and honor for us, if you are willing to attend and give us your blessings.",
+    "sincerely": "Sincerely happy",
+    "bibleVerse": {
+      "content": "And over all these virtues put on love, which binds them all together in perfect unity. Let the peace of Christ rule in your hearts, since as members of one body you were called to peace. And be thankful.",
+      "source": "Colossians 3:14-15"
+    }
+  }
 }

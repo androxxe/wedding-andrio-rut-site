@@ -1,3 +1,59 @@
 {
-  "hello": "Ini Translasi Helo"
+  "menu": {
+    "home": "Beranda",
+    "groom": "Pria",
+    "bride": "Wanita",
+    "event": "Acara",
+    "gallery": "Galeri",
+    "wishes": "Harapan",
+    "gifts": "Hadiah",
+    "closing": "Penutup"
+  },
+  "cover": {
+    "theWeddingOf": "Pernikahan dari",
+    "dear": "Kepada Yth.",
+    "openInvitation": "Buka Undangan"
+  },
+  "home": {
+    "openingVerses": {
+      "content": "Hendaklah kamu sehati sepikir, dalam satu kasih, satu jiwa, satu tujuan. Demikianlah mereka bukan lagi dua melainkan satu. Karena itu apa yang telah dipersatukan Allah, tidak boleh diceraikan manusia.",
+      "source": "Filipi 2: 2b; Matius 19:6"
+    }
+  },
+  "events": {
+    "saveTheDate": "Save The Date",
+    "holyMatrimony": "Pemberkatan Nikah",
+    "holyMatrimonyDate": "Sabtu, 20 April 2024",
+    "holyMatrimonyTime": "09:30 - 11:30 WIB",
+    "holyMatrimonyVenue": "Gereja POUK, TS. 1 PT. RAPP",
+    "weddingReception": "Pesta Adat / Resepsi",
+    "weddingReceptionDate": "Sabtu, 20 April 2024",
+    "weddingReceptionTime": "12:00 PM - Selesai",
+    "weddingReceptionVenue": "Gedung Serbaguna Yeremia, Pkl. Kerinci",
+    "days": "Hari",
+    "hours": "Jam",
+    "minutes": "Menit",
+    "seconds": "Detik",
+    "addToCalendar": "Tambahkan ke Kalendar"
+  },
+  "gallery": {
+    "galleryOfLove": "Galeri Kami"
+  },
+  "wishes": {
+    "wishes": "Harapan",
+    "noMoreWishes": "Tidak ada data",
+    "sayWishes": "Ucapkan Harapan"
+  },
+  "gift": {
+    "weddingGift": "Hadiah",
+    "description": "Kehadiran Anda sangat kami nantikan Jika Anda ingin memberikan hadiah secara digital, berikut nomor rekening kami yang tersedia. Terima kasih!"
+  },
+  "closing": {
+    "label": "Merupakan suatu kebahagiaan & kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i, berkenan hadir dan memberikan doa restu kepada kami",
+    "sincerely": "Hormat kami yang berbahagia",
+    "bibleVerse": {
+      "content": "Dan di atas semuanya itu: kenakanlah kasih, sebagai pengikat yang mempersatukan dan menyempurnakan. 3:15 Hendaklah damai sejahtera Kristus memerintah dalam hatimu, karena untuk itulah kamu telah dipanggil menjadi satu tubuh. Dan bersyukurlah.",
+      "source": "Kolose 3:14-15"
+    }
+  }
 }
