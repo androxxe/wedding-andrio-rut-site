@@ -9,3 +9,4 @@ export * from "./story";
 export * from "./wishes";
 export * from "./gift";
 export * from "./closing";
+export * from "./side-cover";

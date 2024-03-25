@@ -17,7 +17,7 @@ import {
 import { useRef, useState } from "react";
 
 export default function Batak() {
-  const AUTOPLAY_AUDIO = process.env.NEXT_PUBLIC_AUTOPLAY_AUDIO === "true";
+  const AUTOPLAY_AUDIO: boolean = process.env.NEXT_PUBLIC_AUTOPLAY_AUDIO === "true";
 
   const [activeIndex, setActiveIndex] = useState<number | undefined>(undefined);
   const musicRef = useRef<MusicHandle>(null);
