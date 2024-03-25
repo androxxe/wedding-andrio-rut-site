@@ -1,13 +1,13 @@
-import { Input } from "../ui/input";
+import { Input } from "../atoms/input";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { Label } from "../ui/label";
-import { Textarea } from "../ui/textarea";
-import { Button } from "../ui/button";
+import { Label } from "../atoms/label";
+import { Textarea } from "../atoms/textarea";
+import { Button } from "../atoms/button";
 import { MdxCodeWishes, MdxWishes } from "../mdx";
 import { CodingPreview } from "../organism";
-import { Dialog, DialogClose, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "../ui/dialog";
+import { Dialog, DialogClose, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "../atoms/dialog";
 import { useInfiniteQuery, useMutation } from "@tanstack/react-query";
 import { useMemo, useRef } from "react";
 import { wishesSchema } from "@/yupSchemas/wishes";

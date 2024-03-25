@@ -1,7 +1,7 @@
 "use client";
 
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion";
-import { SidebarItems } from "../ui/sidebar-items";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../atoms/accordion";
+import { SidebarItems } from "../atoms/sidebar-items";
 
 export const Sidebar = () => {
   return (

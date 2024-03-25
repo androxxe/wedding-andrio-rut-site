@@ -7,8 +7,8 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger
-} from "@/components/tech/ui/sheet";
-import { SidebarItems } from "@/components/tech/ui/sidebar-items";
+} from "@/components/tech/atoms/sheet";
+import { SidebarItems } from "@/components/tech/atoms/sidebar-items";
 import { Metadata } from "next";
 import { RxHamburgerMenu } from "react-icons/rx";
 import colors from "tailwindcss/colors";
