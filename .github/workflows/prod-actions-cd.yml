@@ -54,6 +54,6 @@ jobs:
           port: 22
           script: |
             cd ${{ secrets.PROD_DIRECTORY }}
-            make stop-production
             make build-production
+            make stop-production
             make start-production
