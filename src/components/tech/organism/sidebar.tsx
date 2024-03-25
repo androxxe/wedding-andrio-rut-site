@@ -1,24 +1,9 @@
 "use client";
 
-import { Suspense } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion";
-import { SiTypescript } from "react-icons/si";
-import Link from "next/link";
-
-type SidebarType = { title: string }[];
+import { SidebarItems } from "../ui/sidebar-items";
 
 export const Sidebar = () => {
-  const sidebars: SidebarType = [
-    { title: "introduction.ts" },
-    { title: "groom-information.ts" },
-    { title: "bride-information.ts" },
-    { title: "wedding-information.ts" },
-    { title: "gallery.ts" },
-    { title: "wishes.ts" },
-    { title: "wedding-gift.ts" },
-    { title: "closing-statement.ts" }
-  ];
-
   return (
     <aside className="w-64 border-r border-neutral-700 md:block hidden overflow-y-auto text-white">
       <Accordion type="single" collapsible defaultValue="about">
@@ -27,23 +12,7 @@ export const Sidebar = () => {
             Documentation
           </AccordionTrigger>
           <AccordionContent className="mt-5 space-y-1">
-            {sidebars.map(({ title }) => (
-              <div className="border-0" key={title}>
-                <button
-                  key={title}
-                  className="w-full transition-colors flex items-center gap-x-2.5 px-5 py-1 text-left"
-                  onClick={(event) => {
-                    event.preventDefault();
-
-                    const element = document.getElementById(title.replace(".ts", ""));
-                    element?.scrollIntoView({ behavior: "smooth" });
-                  }}
-                >
-                  <SiTypescript className="w-4 h-4 shrink-0" />
-                  {title}
-                </button>
-              </div>
-            ))}
+            <SidebarItems menuClassName="px-5" />
           </AccordionContent>
         </AccordionItem>
       </Accordion>
