@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from "react";
 import { MdMusicOff, MdMusicNote } from "react-icons/md";
 
@@ -5,8 +6,14 @@ export interface MusicHandle {
   startPlaying: () => void;
 }
 
+interface MusicProps {
+  isHidden: boolean;
+}
+
 // eslint-disable-next-line react/display-name
-export const Music = forwardRef<MusicHandle>((_, ref) => {
+export const Music = forwardRef<MusicHandle, MusicProps>((props, ref) => {
+  const { isHidden } = props;
+
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
   const audioRef = useRef<HTMLAudioElement>(null);
@@ -47,7 +54,7 @@ export const Music = forwardRef<MusicHandle>((_, ref) => {
   );
 
   return (
-    <div>
+    <div className={cn(isHidden ? "hidden" : "block")}>
       <button
         onClick={handleIsPlaying}
         className="absolute right-3 bottom-4 z-50 w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm cursor-pointer"
@@ -60,7 +67,7 @@ export const Music = forwardRef<MusicHandle>((_, ref) => {
           )}
         </div>
       </button>
-      <audio ref={audioRef} src="/audio/goodness_of_god.mp3" autoPlay loop={true} />
+      <audio ref={audioRef} src="/audio/goodness_of_god.mp3" autoPlay={false} loop={true} />
     </div>
   );
 });

@@ -14,7 +14,7 @@ import {
   Gift,
   Closing
 } from "@/components/general/organism";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 export default function Batak() {
   const AUTOPLAY_AUDIO: boolean = process.env.NEXT_PUBLIC_AUTOPLAY_AUDIO === "true";
@@ -41,11 +41,9 @@ export default function Batak() {
         {activeIndex === 7 && <Gift />}
         {activeIndex === 8 && <Closing />}
         <LanguageSwitcher />
-        {activeIndex !== undefined ? (
-          <>
-            <Music ref={musicRef} />
-          </>
-        ) : null}
+        <Music ref={musicRef} isHidden={activeIndex === undefined} />
+        {/* {activeIndex !== undefined ? (
+        ) : null} */}
       </div>
       {activeIndex !== undefined ? <BottomTab activeIndex={activeIndex} setActiveIndex={setActiveIndex} /> : null}
     </div>
