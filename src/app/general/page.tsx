@@ -35,7 +35,6 @@ export default function Batak() {
     <div className="flex flex-col flex-1 bg-red-500 h-full overflow-y-auto">
       <div className="flex-1 overflow-y-auto relative">
         <Cover
-          isOpen
           onOpen={() => {
             if (AUTOPLAY_AUDIO) musicRef.current?.startPlaying();
             setActiveIndex(0);
@@ -50,10 +49,10 @@ export default function Batak() {
         {activeIndex === 6 && <Wishes />}
         {activeIndex === 7 && <Gift />}
         {activeIndex === 8 && <Closing />}
+        <LanguageSwitcher />
         {activeIndex !== undefined ? (
           <>
             <Music ref={musicRef} />
-            <LanguageSwitcher />
           </>
         ) : null}
       </div>
