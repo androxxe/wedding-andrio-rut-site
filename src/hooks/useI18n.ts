@@ -8,12 +8,12 @@ import { localStorageService } from "@/lib/localStorage";
 export type LanguageType = "en" | "id";
 
 export const useI18n = () => {
-  const lng: LanguageType = (localStorageService.getLanguage("i18nextLng") as LanguageType) ?? "en";
+  const lng: LanguageType = (localStorageService.getLanguage() as LanguageType) ?? "en";
 
   const changeLanguage = async (to: LanguageType) => {
     if (i18n.isInitialized) {
       i18n.changeLanguage(to);
-      localStorageService.setLanguage({ key: "i18nextLng", value: to });
+      localStorageService.setLanguage({ key: "wedding_rio_rut_i18nextLng", value: to });
     }
   };
 
