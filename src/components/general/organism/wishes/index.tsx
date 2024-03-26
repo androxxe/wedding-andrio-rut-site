@@ -20,6 +20,7 @@ import { wishesSchema } from "@/yupSchemas/wishes";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useTranslation } from "react-i18next";
 
 dayjs.extend(duration);
 dayjs.extend(relativeTime);
@@ -27,6 +28,8 @@ dayjs.extend(relativeTime);
 type WishPayload = yup.InferType<typeof wishesSchema>;
 
 export const Wishes = () => {
+  const { t } = useTranslation(["general"]);
+
   const form = useForm<WishPayload>({
     defaultValues: {
       name: "",
@@ -84,7 +87,7 @@ export const Wishes = () => {
           />
         </div>
         <div className="px-5 py-8 lg:py-10 flex flex-col flex-1 relative overflow-y-hidden">
-          <h2 className={cn(viaodaLibre.className, "text-4xl text-center mb-4")}>Wishes</h2>
+          <h2 className={cn(viaodaLibre.className, "text-4xl text-center mb-4")}>{t("general:wishes.wishes")}</h2>
           <div className="overflow-y-auto space-y-4 flex-1">
             {isFetching && <div className="text-center text-sm text-slate-700">Loading...</div>}
             {flattenData.map((wish, index) => (
@@ -96,7 +99,9 @@ export const Wishes = () => {
                 </div>
               </div>
             ))}
-            {!hasNextPage && <div className="text-center text-sm text-slate-700">No more wishes</div>}
+            {!hasNextPage && (
+              <div className="text-center text-sm text-slate-700">{t("general:wishes.noMoreWishes")}</div>
+            )}
             <Button
               onClick={() => fetchNextPage()}
               disabled={!hasNextPage}
@@ -104,14 +109,14 @@ export const Wishes = () => {
               variant="outline"
               className="bg-transparent border-maroon-700 text-maroon-700 hover:bg-transparent"
             >
-              Load more
+              {t("general:wishes.loadMore")}
             </Button>
           </div>
           <div className="pt-8">
             <Dialog>
               <DialogTrigger className="w-full">
                 <Button onClick={() => refetch()} className="w-full bg-maroon-600 hover:bg-maroon-700 duration-100">
-                  Say Wishes
+                  {t("general:wishes.sayWishes")}
                 </Button>
               </DialogTrigger>
               <DialogContent>

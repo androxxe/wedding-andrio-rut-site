@@ -15,12 +15,16 @@ import {
   Closing
 } from "@/components/general/organism";
 import { useI18n } from "@/hooks/useI18n";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Batak() {
   const { init } = useI18n();
 
-  init();
+  useEffect(() => {
+    init();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const AUTOPLAY_AUDIO: boolean = process.env.NEXT_PUBLIC_AUTOPLAY_AUDIO === "true";
 
@@ -31,6 +35,7 @@ export default function Batak() {
     <div className="flex flex-col flex-1 bg-red-500 h-full overflow-y-auto">
       <div className="flex-1 overflow-y-auto relative">
         <Cover
+          isOpen
           onOpen={() => {
             if (AUTOPLAY_AUDIO) musicRef.current?.startPlaying();
             setActiveIndex(0);
@@ -45,8 +50,12 @@ export default function Batak() {
         {activeIndex === 6 && <Wishes />}
         {activeIndex === 7 && <Gift />}
         {activeIndex === 8 && <Closing />}
-        <Music ref={musicRef} />
-        <LanguageSwitcher />
+        {activeIndex !== undefined ? (
+          <>
+            <Music ref={musicRef} />
+            <LanguageSwitcher />
+          </>
+        ) : null}
       </div>
       {activeIndex !== undefined ? <BottomTab activeIndex={activeIndex} setActiveIndex={setActiveIndex} /> : null}
     </div>
