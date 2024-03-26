@@ -9,15 +9,12 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger
 } from "../atoms/dropdown-menu";
-import { useTranslation } from "react-i18next";
 import { LanguageType, useI18n } from "@/hooks/useI18n";
 
 export const LanguageSwitcher = () => {
-  const { i18n } = useTranslation(["general"]);
   const { changeLanguage: changeLanguageI18n } = useI18n();
 
   const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
     changeLanguageI18n(lng as LanguageType);
   };
 

@@ -1,4 +1,4 @@
-type LanguageKeyType = "i18nextLng";
+type LanguageKeyType = "wedding_rio_rut_i18nextLng";
 
 interface GetLocalStorageInterface {
   key: LanguageKeyType;
