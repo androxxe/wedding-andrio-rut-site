@@ -1,3 +1,5 @@
+"use client";
+
 import { ebGaramond, viaodaLibre } from "@/app/general/layout";
 import { WishesResponse, WishesStoreResponse } from "@/interface/wishes";
 import { cn } from "@/lib/utils";

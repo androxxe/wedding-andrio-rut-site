@@ -32,7 +32,7 @@ export const Home = () => {
             melainkan satu. Karena itu apa yang telah dipersatukan Allah, tidak boleh diceraikan manusia.
             <br />
             <br />
-            <span className="font-normal italic">Filipi 2: 26; Matius 19:6</span>
+            <span className="font-normal italic">Filipi 2: 2; Matius 19:6</span>
           </p>
         </div>
       </div>

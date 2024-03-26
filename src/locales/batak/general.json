@@ -1,0 +1,55 @@
+{
+  "menu": {
+    "home": "",
+    "groom": "",
+    "bride": "",
+    "event": "",
+    "gallery": "",
+    "wishes": "",
+    "gifts": "",
+    "closing": ""
+  },
+  "cover": {
+    "theWeddingOf": "",
+    "dear": "",
+    "openInvitation": ""
+  },
+  "home": {
+    "openingVerses": {
+      "content": "Sada ma parrohahon hamu; sada ma haholonganmuna; saroha, sapingkiran ma hamu!. Asa ndada dua be nasida, tung sada daging do. Onpe, naung pinadomu ni Debata, ndang jadi sirangon ni jolma.",
+      "source": "Filipi 2: 2b; Matius 19:6"
+    }
+  },
+  "events": {
+    "saveTheDate": "",
+    "holyMatrimony": "",
+    "holyMatrimonyDate": "",
+    "holyMatrimonyTime": "09:30 - 11:30",
+    "holyMatrimonyVenue": "Gereja POUK TS1, PT. RAPP",
+    "weddingReception": "Wedding Reception",
+    "weddingReceptionDate": "",
+    "weddingReceptionTime": "12:00 - Dohot",
+    "weddingReceptionVenue": "Gedung Serbaguna Yeremia, Pkl. Kerinci",
+    "days": "",
+    "hours": "",
+    "minutes": "",
+    "seconds": "",
+    "addToCalendar": ""
+  },
+  "gallery": {
+    "galleryOfLove": ""
+  },
+  "wishes": {
+    "wishes": "",
+    "noMoreWishes": "",
+    "sayWishes": ""
+  },
+  "closing": {
+    "label": "",
+    "sincerely": "",
+    "bibleVerse": {
+      "content": "Alai diginjang ni saluhutna i: I ma haholongon ni roha i; ai i do rahutrahut ni nasa harimpason. Jala dame ni Kristus i ma mangarajai di bagasan rohamuna, ai tusi do hamu dijou di bagasan sada daging. Gabe parroha mauliate ma hamu!",
+      "source": "Kolose 3:14-15"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import { MDXProps } from "mdx/types";
 import { ReactElement } from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../atoms/tabs";
 
 interface CodingPreviewInterface {
   children: React.ReactNode;

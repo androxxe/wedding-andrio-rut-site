@@ -1,3 +1,5 @@
+"use client";
+
 import { bonheurRoyale } from "@/app/general/layout";
 import { GALLERY_IMAGES } from "@/constants";
 import { cn } from "@/lib/utils";

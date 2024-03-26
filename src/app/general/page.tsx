@@ -1,6 +1,6 @@
 "use client";
 
-import { Music, MusicHandle } from "@/components/general/molecules";
+import { LanguageSwitcher, Music, MusicHandle } from "@/components/general/molecules";
 import {
   BottomTab,
   Groom,
@@ -14,10 +14,15 @@ import {
   Gift,
   Closing
 } from "@/components/general/organism";
+import { useI18n } from "@/hooks/useI18n";
 import { useRef, useState } from "react";
 
 export default function Batak() {
-  const AUTOPLAY_AUDIO = process.env.NEXT_PUBLIC_AUTOPLAY_AUDIO === "true";
+  const { init } = useI18n();
+
+  init();
+
+  const AUTOPLAY_AUDIO: boolean = process.env.NEXT_PUBLIC_AUTOPLAY_AUDIO === "true";
 
   const [activeIndex, setActiveIndex] = useState<number | undefined>(undefined);
   const musicRef = useRef<MusicHandle>(null);
@@ -41,6 +46,7 @@ export default function Batak() {
         {activeIndex === 7 && <Gift />}
         {activeIndex === 8 && <Closing />}
         <Music ref={musicRef} />
+        <LanguageSwitcher />
       </div>
       {activeIndex !== undefined ? <BottomTab activeIndex={activeIndex} setActiveIndex={setActiveIndex} /> : null}
     </div>

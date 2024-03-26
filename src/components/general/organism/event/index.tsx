@@ -1,3 +1,5 @@
+"use client";
+
 import { bonheurRoyale, ebGaramond, viaodaLibre } from "@/app/general/layout";
 import { cn } from "@/lib/utils";
 import Countdown, { CountdownRenderProps } from "react-countdown";
@@ -81,7 +83,7 @@ export const Event = () => {
               <Link
                 href={`https://www.google.com/calendar/render?action=TEMPLATE&text=Andrio%20&%20Rut%20Wedding&dates=20240420T093000/20240420T113000&details=Andrio%20&%20Rut%20Wedding`}
                 target="_blank"
-                className={cn(ebGaramond.className, "bg-maroon-400 px-3 py-1 rounded-lg text-center text-white")}
+                className={cn(ebGaramond.className, "bg-maroon-400 px-3 py-1 rounded text-center text-white")}
               >
                 Add to Calendar
               </Link>

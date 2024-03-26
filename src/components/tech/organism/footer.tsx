@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { BiGitBranch, BiRefresh, BiXCircle } from "react-icons/bi";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/tech/ui/tooltip";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/tech/atoms/tooltip";
 import { IoWarningOutline, IoLogoGithub } from "react-icons/io5";
 
 export const Footer = () => (

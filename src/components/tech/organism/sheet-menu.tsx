@@ -1,8 +1,8 @@
 "use client";
 
 import { RxHamburgerMenu } from "react-icons/rx";
-import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "../ui/sheet";
-import { SidebarItems } from "../ui/sidebar-items";
+import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "../atoms/sheet";
+import { SidebarItems } from "../atoms/sidebar-items";
 import colors from "tailwindcss/colors";
 import { useRef } from "react";
 
