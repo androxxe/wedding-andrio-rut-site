@@ -28,7 +28,7 @@ export const Home = () => {
                 src="/images/theme/general/home-cover.jpg"
                 alt="Foto Andrio & Rut"
                 className="object-cover rounded-t-full p-3 shadow-sm"
-                sizes="40vw"
+                sizes="(max-width: 1024px) 20vh, 40vh"
               />
             </div>
           </div>
