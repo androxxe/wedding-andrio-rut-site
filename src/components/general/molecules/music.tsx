@@ -11,12 +11,18 @@ export const Music = forwardRef<MusicHandle>((_, ref) => {
 
   const audioRef = useRef<HTMLAudioElement>(null);
 
-  const handleIsPlaying = () => {
-    setIsPlaying((prev) => !prev);
+  const handleIsPlaying = async () => {
     if (isPlaying) {
+      setIsPlaying(false);
       audioRef.current?.pause();
     } else {
-      audioRef.current?.play();
+      try {
+        await audioRef.current?.play();
+        setIsPlaying(true);
+      } catch (error) {
+        setIsPlaying(false);
+        console.log("[Error] handleIsPlaying", error);
+      }
     }
   };
 

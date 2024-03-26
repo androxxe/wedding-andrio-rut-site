@@ -42,8 +42,6 @@ export const useI18n = () => {
   };
 
   const init = () => {
-    console.log("init called 2");
-
     i18n.use(initReactI18next).init(config);
   };
 

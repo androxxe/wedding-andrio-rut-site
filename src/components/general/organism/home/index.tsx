@@ -25,7 +25,7 @@ export const Home = () => {
             <div className="relative w-64 h-96 lg:w-80 lg:h-[30rem] p-5 rounded-t-full border border-maroon-600 shadow-sm">
               <Image
                 fill
-                src="/images/gallery/DSC04814.jpg"
+                src="/images/theme/general/home-cover.jpg"
                 alt="Foto Andrio & Rut"
                 className="object-cover rounded-t-full p-3 shadow-sm"
                 sizes="40vw"
