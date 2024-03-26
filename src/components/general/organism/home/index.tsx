@@ -15,8 +15,8 @@ export const Home = () => {
           src="/images/theme/general/home-top-ulos.jpg"
           alt="Pola Ulos"
           fill
-          objectFit="cover"
-          className="mt-[-20px]"
+          sizes="40vw"
+          className="mt-[-20px] object-cover"
         />
       </div>
       <div className="flex items-center justify-center flex-col p-5 lg:py-10 flex-1">
@@ -25,10 +25,10 @@ export const Home = () => {
             <div className="relative w-64 h-96 lg:w-80 lg:h-[30rem] p-5 rounded-t-full border border-maroon-600 shadow-sm">
               <Image
                 fill
-                objectFit="cover"
                 src="/images/gallery/DSC04814.jpg"
                 alt="Foto Andrio & Rut"
-                className="rounded-t-full p-3 shadow-sm"
+                className="object-cover rounded-t-full p-3 shadow-sm"
+                sizes="40vw"
               />
             </div>
           </div>

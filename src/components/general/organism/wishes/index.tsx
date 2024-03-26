@@ -82,8 +82,8 @@ export const Wishes = () => {
             src="/images/theme/general/home-top-ulos.jpg"
             fill
             alt="Ulos"
-            objectFit="cover"
-            className="rounded-t-md"
+            className="rounded-t-md object-cover"
+            sizes="(max-width: 768px) 10vh, 20vh"
           />
         </div>
         <div className="px-5 py-8 lg:py-10 flex flex-col flex-1 relative overflow-y-hidden">
@@ -154,8 +154,8 @@ export const Wishes = () => {
             src="/images/theme/general/home-top-ulos.jpg"
             fill
             alt="Ulos"
-            objectFit="cover"
-            className="rounded-b-md"
+            className="rounded-b-md object-cover"
+            sizes="(max-width: 768px) 10vh, 20vh"
           />
         </div>
       </div>

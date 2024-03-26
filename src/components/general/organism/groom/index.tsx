@@ -30,35 +30,36 @@ export const Groom = () => {
         <Image
           src="/images/theme/general/groom-andrio.png"
           fill
-          objectFit="contain"
           alt="Groom Andrio Pratama Sirait"
+          className="object-contain"
+          sizes="(max-width: 768px) 20vh, 30vh"
         />
       </div>
       <div className="w-32 lg:w-40 h-32 absolute top-[38rem] lg:top-[42rem] left-0 flex items-start justify-start z-10">
         <Image
           src="/images/theme/general/groom-flower-1.png"
           fill
-          objectFit="contain"
-          objectPosition="left"
           alt="Ornament"
+          className="object-contain object-left"
+          sizes="(max-width: 768px) 10vh, 20vh"
         />
       </div>
       <div className="w-32 lg:w-40 h-32 absolute top-[38rem] lg:top-[42rem] left-12 lg:left-16 flex items-start justify-start">
         <Image
           src="/images/theme/general/groom-flower-2.png"
           fill
-          objectFit="contain"
-          objectPosition="left"
           alt="Ornament"
+          className="object-contain object-left"
+          sizes="(max-width: 768px) 10vh, 20vh"
         />
       </div>
       <div className="w-32 h-48 absolute top-[14rem] left-0 flex items-start justify-start z-10">
         <Image
           src="/images/theme/general/groom-flower-3.png"
           fill
-          objectFit="contain"
-          objectPosition="left"
           alt="Ornament"
+          className="object-contain object-left"
+          sizes="(max-width: 768px) 10vh, 20vh"
         />
       </div>
     </div>

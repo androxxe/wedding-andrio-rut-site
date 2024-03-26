@@ -27,33 +27,39 @@ export const Bride = () => {
         </div>
       </div>
       <div className="w-64 lg:w-80 h-[42rem] absolute top-24 -right-12">
-        <Image src="/images/theme/general/bride-rut.png" fill objectFit="contain" alt="Bride Andrio Pratama Sirait" />
+        <Image
+          src="/images/theme/general/bride-rut.png"
+          fill
+          alt="Bride Andrio Pratama Sirait"
+          className="object-contain"
+          sizes="(max-width: 768px) 20vh, 30vh"
+        />
       </div>
       <div className="w-32 lg:w-40 h-32 absolute top-[38rem] lg:top-[42rem] right-0 flex items-start justify-start z-10">
         <Image
           src="/images/theme/general/bride-flower-1.png"
           fill
-          objectFit="contain"
-          objectPosition="right"
           alt="Ornament"
+          className="object-right object-contain"
+          sizes="(max-width: 768px) 10vh, 20vh"
         />
       </div>
       <div className="w-32 lg:w-40 h-32 absolute top-[38rem] lg:top-[42rem] right-12 lg:right-16 flex items-start justify-start">
         <Image
           src="/images/theme/general/bride-flower-2.png"
           fill
-          objectFit="contain"
-          objectPosition="right"
           alt="Ornament"
+          className="object-right object-contain"
+          sizes="(max-width: 768px) 10vh, 20vh"
         />
       </div>
       <div className="w-32 h-48 absolute top-[14rem] right-0 flex items-start justify-start z-10">
         <Image
           src="/images/theme/general/bride-flower-3.png"
           fill
-          objectFit="contain"
-          objectPosition="right"
           alt="Ornament"
+          className="object-right object-contain"
+          sizes="(max-width: 768px) 10vh, 20vh"
         />
       </div>
     </div>

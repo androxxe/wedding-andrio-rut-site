@@ -65,9 +65,9 @@ export const Cover = (props: CoverProps) => {
         <Image
           src="/images/theme/general/cover-rumah-adat.png"
           fill
-          objectFit="contain"
+          sizes="(max-width: 768px) 50vh, 50vh"
+          className="object-contain"
           alt="Rumah Adat"
-          className="bg-contain bg-no-repeat"
         />
       </div>
     </div>
