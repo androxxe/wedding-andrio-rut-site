@@ -1,10 +1,9 @@
 "use client";
 
-import { bonheurRoyale, ebGaramond, viaodaLibre } from "@/app/general/layout";
+import { bonheurRoyale, viaodaLibre } from "@/app/general/layout";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 
-export const SideCover = () => {
+export const LargeCover = () => {
   return (
     <div className="w-full h-full bg-maroon-600 flex flex-col items-center justify-center relative">
       <div className="absolute top-0 left-0 h-full w-full opacity-20 bg-[url(/images/theme/general/batik-batak.jpg)] bg-[length:16rem_16rem]"></div>
