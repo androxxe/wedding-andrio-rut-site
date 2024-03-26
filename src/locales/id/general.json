@@ -15,10 +15,16 @@
     "openInvitation": "Buka Undangan"
   },
   "home": {
-    "openingVerses": {
+    "openingVerse": {
       "content": "Hendaklah kamu sehati sepikir, dalam satu kasih, satu jiwa, satu tujuan. Demikianlah mereka bukan lagi dua melainkan satu. Karena itu apa yang telah dipersatukan Allah, tidak boleh diceraikan manusia.",
       "source": "Filipi 2: 2b; Matius 19:6"
     }
+  },
+  "groom": {
+    "content": "Anak ke 3 dari Alm. Drs. Hasiholan Sirait & Elfrida Br Sinurat"
+  },
+  "bride": {
+    "content": "Anak ke 5 dari Manampin Sihite & Sedima Br Simamora"
   },
   "events": {
     "saveTheDate": "Save The Date",
@@ -42,7 +48,8 @@
   "wishes": {
     "wishes": "Harapan",
     "noMoreWishes": "Tidak ada data",
-    "sayWishes": "Ucapkan Harapan"
+    "sayWishes": "Ucapkan Harapan",
+    "loadMore": "Muat Lebih Banyak"
   },
   "gift": {
     "weddingGift": "Hadiah",

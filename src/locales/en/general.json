@@ -15,10 +15,16 @@
     "openInvitation": "Open Invitation"
   },
   "home": {
-    "openingVerses": {
+    "openingVerse": {
       "content": "Then make my joy complete by being like-minded, having the same love, being one in spirit and of one mind. So they are no longer two, but one flesh. Therefore what God has joined together, let no one separate.",
       "source": "Philippians 2: 2; Matthew 19:6"
     }
+  },
+  "groom": {
+    "content": "The third child of Drs. Hasiholan Sirait & Elfrida Br Sinurat"
+  },
+  "bride": {
+    "content": "The fifth child of Manampin Sihite & Sedima Br Simamora"
   },
   "events": {
     "saveTheDate": "Save The Date",
@@ -42,7 +48,8 @@
   "wishes": {
     "wishes": "Wishes",
     "noMoreWishes": "No more wishes",
-    "sayWishes": "Say Wishes"
+    "sayWishes": "Say Wishes",
+    "loadMore": "Load More"
   },
   "gift": {
     "weddingGift": "Wedding Gift",

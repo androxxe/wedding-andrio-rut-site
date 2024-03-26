@@ -34,9 +34,6 @@ export const LanguageSwitcher = () => {
           <DropdownMenuItem onClick={() => changeLanguage("id")} className="cursor-pointer">
             Indonesia
           </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => changeLanguage("batak")} className="cursor-pointer">
-            Batak
-          </DropdownMenuItem>
           <DropdownMenuItem onClick={() => changeLanguage("en")} className="cursor-pointer">
             English
           </DropdownMenuItem>
