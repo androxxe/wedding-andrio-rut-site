@@ -1,5 +1,3 @@
-"use client";
-
 export const MediumCover = () => {
   return (
     <div className="bg-maroon-600 flex flex-col items-center justify-center absolute top-0 left-0 w-full h-full">

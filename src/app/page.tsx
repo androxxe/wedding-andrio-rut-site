@@ -1,8 +1,8 @@
-"use server";
+"use client";
 
 import Link from "next/link";
 
-export default async function Home() {
+export default function Home() {
   return (
     <main className="flex items-center justify-center flex-col h-screen">
       <h4 className="text-xl font-normal mb-5">Please choose your side</h4>

@@ -14,18 +14,9 @@ import {
   Gift,
   Closing
 } from "@/components/general/organism";
-import { useI18n } from "@/hooks/useI18n";
 import { useEffect, useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
 
 export default function Batak() {
-  const { init } = useI18n();
-
-  useEffect(() => {
-    init();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   const AUTOPLAY_AUDIO: boolean = process.env.NEXT_PUBLIC_AUTOPLAY_AUDIO === "true";
 
   const [activeIndex, setActiveIndex] = useState<number | undefined>(undefined);
