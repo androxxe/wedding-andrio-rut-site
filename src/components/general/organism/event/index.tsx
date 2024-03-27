@@ -7,6 +7,7 @@ import dayjs from "dayjs";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
+import { AttentionSeeker, Fade, Slide, Zoom } from "react-awesome-reveal";
 
 type ListEventProps = {
   title: string;
@@ -57,53 +58,63 @@ export const Event = () => {
 
   return (
     <div className="w-full h-full p-3 lg:p-12 bg-[url(/images/theme/general/main-pattern.jpg)] bg-[length:16rem_16rem]">
-      <div className="bg-gold-200 h-full flex flex-col rounded-md shadow-sm">
-        <div className="relative w-full h-6">
-          <Image
-            src="/images/theme/general/home-top-ulos.jpg"
-            fill
-            alt="Ulos"
-            className="rounded-t-md object-cover"
-            sizes="(max-width: 768px) 10vh, 20vh"
-          />
-        </div>
-        <div className="px-5 py-8 lg:py-10 flex-1 overflow-y-auto">
-          <h2 className={cn(viaodaLibre.className, "text-4xl text-center mb-4")}>{t("general:events.saveTheDate")}</h2>
-          <ListEvent
-            title={t("general:events.holyMatrimony")}
-            date={t("general:events.holyMatrimonyDate")}
-            time={t("general:events.holyMatrimonyTime")}
-            location={t("general:events.holyMatrimonyVenue")}
-          />
-          <ListEvent
-            title={t("general:events.weddingReception")}
-            date={t("general:events.weddingReceptionDate")}
-            time={t("general:events.weddingReceptionTime")}
-            location={t("general:events.weddingReceptionVenue")}
-          />
-          <div>
-            <Countdown date={dayjs("2024-04-20T09:30:00+07:00").toDate()} renderer={renderer} />
-            <div className="flex items-center justify-center mt-5 lg:mt-7">
-              <Link
-                href={`https://www.google.com/calendar/render?action=TEMPLATE&text=Andrio%20&%20Rut%20Wedding&dates=20240420T093000/20240420T113000&details=Andrio%20&%20Rut%20Wedding`}
-                target="_blank"
-                className={cn(ebGaramond.className, "bg-maroon-400 px-3 py-1 rounded text-center text-white")}
-              >
-                {t("general:events.addToCalendar")}
-              </Link>
-            </div>
+      <Slide direction="down">
+        <div className="bg-gold-200 h-full flex flex-col rounded-md shadow-sm">
+          <div className="relative w-full h-6">
+            <Image
+              src="/images/theme/general/home-top-ulos.jpg"
+              fill
+              alt="Ulos"
+              className="rounded-t-md object-cover"
+              sizes="(max-width: 768px) 10vh, 20vh"
+            />
+          </div>
+          <div className="px-5 py-8 lg:py-10 flex-1 overflow-y-auto">
+            <Zoom>
+              <h2 className={cn(viaodaLibre.className, "text-4xl text-center mb-4")}>
+                {t("general:events.saveTheDate")}
+              </h2>
+            </Zoom>
+            <Fade delay={500}>
+              <ListEvent
+                title={t("general:events.holyMatrimony")}
+                date={t("general:events.holyMatrimonyDate")}
+                time={t("general:events.holyMatrimonyTime")}
+                location={t("general:events.holyMatrimonyVenue")}
+              />
+            </Fade>
+            <Fade delay={850}>
+              <ListEvent
+                title={t("general:events.weddingReception")}
+                date={t("general:events.weddingReceptionDate")}
+                time={t("general:events.weddingReceptionTime")}
+                location={t("general:events.weddingReceptionVenue")}
+              />
+            </Fade>
+            <Zoom>
+              <Countdown date={dayjs("2024-04-20T09:30:00+07:00").toDate()} renderer={renderer} />
+              <div className="flex items-center justify-center mt-5 lg:mt-7">
+                <Link
+                  href={`https://www.google.com/calendar/render?action=TEMPLATE&text=Andrio%20&%20Rut%20Wedding&dates=20240420T093000/20240420T113000&details=Andrio%20&%20Rut%20Wedding`}
+                  target="_blank"
+                  className={cn(ebGaramond.className, "bg-maroon-400 px-3 py-1 rounded text-center text-white")}
+                >
+                  {t("general:events.addToCalendar")}
+                </Link>
+              </div>
+            </Zoom>
+          </div>
+          <div className="relative w-full h-6">
+            <Image
+              src="/images/theme/general/home-top-ulos.jpg"
+              fill
+              alt="Ulos"
+              className="rounded-b-md object-cover"
+              sizes="(max-width: 768px) 10vh, 20vh"
+            />
           </div>
         </div>
-        <div className="relative w-full h-6">
-          <Image
-            src="/images/theme/general/home-top-ulos.jpg"
-            fill
-            alt="Ulos"
-            className="rounded-b-md object-cover"
-            sizes="(max-width: 768px) 10vh, 20vh"
-          />
-        </div>
-      </div>
+      </Slide>
     </div>
   );
 };

@@ -22,6 +22,7 @@
     "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
     "@hookform/resolvers": "^3.3.4",
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
@@ -45,6 +46,7 @@
     "lucide-react": "^0.344.0",
     "next": "14.1.0",
     "react": "^18",
+    "react-awesome-reveal": "^4.2.8",
     "react-countdown": "^2.3.5",
     "react-dom": "^18",
     "react-grid-gallery": "^1.0.1-alpha.0",

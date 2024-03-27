@@ -4,6 +4,7 @@ import { ebGaramond } from "@/app/general/layout";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
+import { Fade, Slide } from "react-awesome-reveal";
 
 export const Home = () => {
   const { t } = useTranslation(["general"]);
@@ -20,25 +21,29 @@ export const Home = () => {
         />
       </div>
       <div className="flex items-center justify-center flex-col p-5 lg:py-10 flex-1">
-        <div className="bg-gold-200 p-8 rounded-lg h-full flex flex-col items-center justify-center">
-          <div className="flex items-center justify-center mb-12">
-            <div className="relative w-64 h-96 lg:w-80 lg:h-[30rem] p-5 rounded-t-full border border-maroon-600 shadow-sm">
-              <Image
-                fill
-                src="/images/theme/general/home-cover.jpg"
-                alt="Foto Andrio & Rut"
-                className="object-cover rounded-t-full p-3 shadow-sm"
-                sizes="(max-width: 1024px) 20vh, 40vh"
-              />
+        <Slide direction="up">
+          <div className="bg-gold-200 p-8 rounded-lg h-full flex flex-col items-center justify-center">
+            <div className="flex items-center justify-center mb-12">
+              <div className="relative w-64 h-96 lg:w-80 lg:h-[30rem] p-5 rounded-t-full border border-maroon-600 shadow-sm">
+                <Fade>
+                  <Image
+                    fill
+                    src="/images/theme/general/home-cover.jpg"
+                    alt="Foto Andrio & Rut"
+                    className="object-cover rounded-t-full p-3 shadow-sm"
+                    sizes="(max-width: 1024px) 20vh, 40vh"
+                  />
+                </Fade>
+              </div>
             </div>
+            <p className={cn(ebGaramond.className, "text-maroon-700 text-base font-medium text-center")}>
+              {t("general:home.openingVerse.content")}
+              <br />
+              <br />
+              <span className="font-normal italic">{t("general:home.openingVerse.source")}</span>
+            </p>
           </div>
-          <p className={cn(ebGaramond.className, "text-maroon-700 text-base font-medium text-center")}>
-            {t("general:home.openingVerse.content")}
-            <br />
-            <br />
-            <span className="font-normal italic">{t("general:home.openingVerse.source")}</span>
-          </p>
-        </div>
+        </Slide>
       </div>
     </div>
   );

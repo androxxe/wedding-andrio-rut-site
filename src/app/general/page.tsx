@@ -24,8 +24,9 @@ export default function Batak() {
 
   return (
     <div className="flex flex-col flex-1 bg-red-500 h-full overflow-y-auto">
-      <div className="flex-1 overflow-y-auto relative">
+      <div className="flex-1 overflow-y-auto relative transition-opacity">
         <Cover
+          isOpen
           onOpen={() => {
             if (AUTOPLAY_AUDIO) musicRef.current?.startPlaying();
             setActiveIndex(0);
