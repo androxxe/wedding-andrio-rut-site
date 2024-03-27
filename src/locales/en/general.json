@@ -1,7 +1,9 @@
 {
   "chooseLanguage": "Choose Language",
   "whichSide": "Which side are you on?",
+  "whichSideDescription": "Please choose the side you are on to see the content",
   "normalPerson": "Normal Person",
+  "continue": "Continue",
   "itGeek": "IT Geek",
   "menu": {
     "home": "Home",
