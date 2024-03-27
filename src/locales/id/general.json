@@ -1,5 +1,8 @@
 {
   "chooseLanguage": "Pilih Bahasa",
+  "whichSide": "Pilih Sisi Anda",
+  "normalPerson": "Orang Biasa",
+  "itGeek": "Orang IT",
   "menu": {
     "home": "Beranda",
     "groom": "Pria",

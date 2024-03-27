@@ -1,5 +1,8 @@
 {
   "chooseLanguage": "Choose Language",
+  "whichSide": "Which side are you on?",
+  "normalPerson": "Normal Person",
+  "itGeek": "IT Geek",
   "menu": {
     "home": "Home",
     "groom": "Groom",
