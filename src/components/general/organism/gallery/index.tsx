@@ -4,6 +4,7 @@ import { bonheurRoyale } from "@/app/general/layout";
 import { GALLERY_IMAGES } from "@/constants";
 import { cn } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
+import { Slide } from "react-awesome-reveal";
 import { Gallery as ReactGridGallery } from "react-grid-gallery";
 import { useTranslation } from "react-i18next";
 import Lightbox from "yet-another-react-lightbox";
@@ -26,9 +27,11 @@ export const Gallery = () => {
 
   return (
     <div className="w-full h-full flex flex-col p-3 lg:p-12 bg-[url(/images/theme/general/main-pattern.jpg)] bg-[length:16rem_16rem]">
-      <h2 className={cn(bonheurRoyale.className, "text-5xl text-center text-white mb-8")}>
-        {t("general:gallery.galleryOfLove")}
-      </h2>
+      <Slide direction="down">
+        <h2 className={cn(bonheurRoyale.className, "text-5xl text-center text-white mb-8")}>
+          {t("general:gallery.galleryOfLove")}
+        </h2>
+      </Slide>
       <div className="w-full flex-1 flex relative bg-gold-200 p-1 rounded-md">
         <div ref={cardRef} className="h-full w-full">
           <ReactGridGallery

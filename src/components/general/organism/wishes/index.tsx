@@ -21,6 +21,7 @@ import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useTranslation } from "react-i18next";
+import { Slide } from "react-awesome-reveal";
 
 dayjs.extend(duration);
 dayjs.extend(relativeTime);
@@ -75,90 +76,98 @@ export const Wishes = () => {
   const flattenData = useMemo(() => data?.pages.map((page) => page.data).flat() || [], [data]);
 
   return (
-    <div className="w-full h-full flex flex-col p-3 lg:p-12 bg-[url(/images/theme/general/main-pattern.jpg)] bg-[length:16rem_16rem]">
-      <div className="bg-gold-200 h-full flex flex-col rounded-md shadow-sm">
-        <div className="relative w-full h-6">
-          <Image
-            src="/images/theme/general/home-top-ulos.jpg"
-            fill
-            alt="Ulos"
-            className="rounded-t-md object-cover"
-            sizes="(max-width: 768px) 10vh, 20vh"
-          />
-        </div>
-        <div className="px-5 py-8 lg:py-10 flex flex-col flex-1 relative overflow-y-hidden">
-          <h2 className={cn(viaodaLibre.className, "text-4xl text-center mb-4")}>{t("general:wishes.wishes")}</h2>
-          <div className="overflow-y-auto space-y-4 flex-1">
-            {isFetching && <div className="text-center text-sm text-slate-700">Loading...</div>}
-            {flattenData.map((wish, index) => (
-              <div key={index}>
-                <div className={cn(ebGaramond.className, "text-medium font-semibold text-maroon-700")}>{wish.name}</div>
-                <div className={cn(ebGaramond.className, "text-base font-medium mb-1 text-slate-700")}>{wish.wish}</div>
-                <div className="text-xs text-slate-600">
-                  {dayjs(wish.created_at).locale("id").format("ddd, DD MMM YYYY HH:mm")}
+    <div className="w-full h-full p-3 lg:p-12 bg-[url(/images/theme/general/main-pattern.jpg)] bg-[length:16rem_16rem]">
+      <Slide direction="up" className="w-full h-full">
+        <div className="bg-gold-200 h-full flex flex-col rounded-md shadow-sm">
+          <div className="relative w-full h-6">
+            <Image
+              src="/images/theme/general/home-top-ulos.jpg"
+              fill
+              alt="Ulos"
+              className="rounded-t-md object-cover"
+              sizes="(max-width: 768px) 10vh, 20vh"
+            />
+          </div>
+          <div className="px-5 py-8 lg:py-10 flex flex-col flex-1 relative overflow-y-hidden">
+            <h2 className={cn(viaodaLibre.className, "text-4xl text-center mb-4")}>{t("general:wishes.wishes")}</h2>
+            <div className="overflow-y-auto space-y-4 flex-1">
+              {isFetching && <div className="text-center text-sm text-slate-700">Loading...</div>}
+              {flattenData.map((wish, index) => (
+                <div key={index}>
+                  <div className={cn(ebGaramond.className, "text-medium font-semibold text-maroon-700")}>
+                    {wish.name}
+                  </div>
+                  <div className={cn(ebGaramond.className, "text-base font-medium mb-1 text-slate-700")}>
+                    {wish.wish}
+                  </div>
+                  <div className="text-xs text-slate-600">
+                    {dayjs(wish.created_at).locale("id").format("ddd, DD MMM YYYY HH:mm")}
+                  </div>
                 </div>
-              </div>
-            ))}
-            {!hasNextPage && (
-              <div className="text-center text-sm text-slate-700">{t("general:wishes.noMoreWishes")}</div>
-            )}
-            <Button
-              onClick={() => fetchNextPage()}
-              disabled={!hasNextPage}
-              size="xs"
-              variant="outline"
-              className="bg-transparent border-maroon-700 text-maroon-700 hover:bg-transparent"
-            >
-              {t("general:wishes.loadMore")}
-            </Button>
-          </div>
-          <div className="pt-8">
-            <Dialog>
-              <DialogTrigger className="w-full">
-                <Button onClick={() => refetch()} className="w-full bg-maroon-600 hover:bg-maroon-700 duration-100">
-                  {t("general:wishes.sayWishes")}
+              ))}
+              {!hasNextPage && (
+                <div className="text-center text-sm text-slate-700">{t("general:wishes.noMoreWishes")}</div>
+              )}
+              {hasNextPage && (
+                <Button
+                  onClick={() => fetchNextPage()}
+                  disabled={!hasNextPage}
+                  size="xs"
+                  variant="outline"
+                  className="bg-transparent border-maroon-700 text-maroon-700 hover:bg-transparent"
+                >
+                  {t("general:wishes.loadMore")}
                 </Button>
-              </DialogTrigger>
-              <DialogContent>
-                <DialogHeader>
-                  <DialogTitle className="mb-5">Say Wishes</DialogTitle>
-                  <form className="space-y-5" onSubmit={form.handleSubmit(onSubmit)}>
-                    <div className="grid w-full gap-1.5">
-                      <Label htmlFor="name">Name</Label>
-                      <Input type="name" id="name" placeholder="Name" {...form.register("name")} />
-                      {form.formState.errors?.name?.message && (
-                        <span className="text-xs text-red-500">{form.formState.errors?.name?.message}</span>
-                      )}
-                    </div>
-                    <div className="grid w-full gap-1.5">
-                      <Label htmlFor="message">Wish</Label>
-                      <Textarea placeholder="Type your wish here." {...form.register("wish")} />
-                      {form.formState.errors?.name?.message && (
-                        <span className="text-xs text-red-500">{form.formState.errors?.name?.message}</span>
-                      )}
-                    </div>
-                    <div>
-                      <DialogClose ref={dialogRef}></DialogClose>
-                      <Button type="submit" className="bg-maroon-600 hover:bg-maroon-700 duration-100">
-                        Save
-                      </Button>
-                    </div>
-                  </form>
-                </DialogHeader>
-              </DialogContent>
-            </Dialog>
+              )}
+            </div>
+            <div className="pt-8">
+              <Dialog>
+                <DialogTrigger className="w-full">
+                  <Button onClick={() => refetch()} className="w-full bg-maroon-600 hover:bg-maroon-700 duration-100">
+                    {t("general:wishes.sayWishes")}
+                  </Button>
+                </DialogTrigger>
+                <DialogContent>
+                  <DialogHeader>
+                    <DialogTitle className="mb-5">Say Wishes</DialogTitle>
+                    <form className="space-y-5" onSubmit={form.handleSubmit(onSubmit)}>
+                      <div className="grid w-full gap-1.5">
+                        <Label htmlFor="name">Name</Label>
+                        <Input type="name" id="name" placeholder="Name" {...form.register("name")} />
+                        {form.formState.errors?.name?.message && (
+                          <span className="text-xs text-red-500">{form.formState.errors?.name?.message}</span>
+                        )}
+                      </div>
+                      <div className="grid w-full gap-1.5">
+                        <Label htmlFor="message">Wish</Label>
+                        <Textarea placeholder="Type your wish here." {...form.register("wish")} />
+                        {form.formState.errors?.name?.message && (
+                          <span className="text-xs text-red-500">{form.formState.errors?.name?.message}</span>
+                        )}
+                      </div>
+                      <div>
+                        <DialogClose ref={dialogRef}></DialogClose>
+                        <Button type="submit" className="bg-maroon-600 hover:bg-maroon-700 duration-100">
+                          Save
+                        </Button>
+                      </div>
+                    </form>
+                  </DialogHeader>
+                </DialogContent>
+              </Dialog>
+            </div>
+          </div>
+          <div className="relative w-full h-6">
+            <Image
+              src="/images/theme/general/home-top-ulos.jpg"
+              fill
+              alt="Ulos"
+              className="rounded-b-md object-cover"
+              sizes="(max-width: 768px) 10vh, 20vh"
+            />
           </div>
         </div>
-        <div className="relative w-full h-6">
-          <Image
-            src="/images/theme/general/home-top-ulos.jpg"
-            fill
-            alt="Ulos"
-            className="rounded-b-md object-cover"
-            sizes="(max-width: 768px) 10vh, 20vh"
-          />
-        </div>
-      </div>
+      </Slide>
     </div>
   );
 };

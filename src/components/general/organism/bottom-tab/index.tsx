@@ -27,7 +27,7 @@ const Menu = (props: MenuProps) => {
       <button
         onClick={onClick}
         className={cn(
-          "w-16 h-16 rounded-lg flex items-center justify-center flex-col transition-transform duration-200",
+          "w-16 h-16 rounded-lg flex items-center justify-center flex-col duration-200 transition-colors",
           isActive ? "bg-gold-200 text-maroon-600 hover:bg-maroon-200" : "text-gold-200"
         )}
       >

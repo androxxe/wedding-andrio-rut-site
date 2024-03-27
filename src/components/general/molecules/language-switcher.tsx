@@ -10,9 +10,12 @@ import {
   DropdownMenuTrigger
 } from "../atoms/dropdown-menu";
 import { LanguageType, useI18n } from "@/hooks/useI18n";
+import { useTranslation } from "react-i18next";
 
 export const LanguageSwitcher = () => {
   const { changeLanguage: changeLanguageI18n } = useI18n();
+
+  const { t } = useTranslation(["general"]);
 
   const changeLanguage = (lng: string) => {
     changeLanguageI18n(lng as LanguageType);
@@ -29,7 +32,7 @@ export const LanguageSwitcher = () => {
           </button>
         </DropdownMenuTrigger>
         <DropdownMenuContent side="left">
-          <DropdownMenuLabel>Pilih Bahasa</DropdownMenuLabel>
+          <DropdownMenuLabel>{t("general:chooseLanguage")}</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuItem onClick={() => changeLanguage("id")} className="cursor-pointer">
             Indonesia

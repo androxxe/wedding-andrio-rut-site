@@ -1,4 +1,10 @@
 {
+  "chooseLanguage": "Pilih Bahasa",
+  "whichSide": "Pilih Sisi Anda",
+  "whichSideDescription": "Silakan pilih sisi Anda untuk melihat informasi yang sesuai",
+  "normalPerson": "Orang Biasa",
+  "continue": "Lanjutkan",
+  "itGeek": "Orang IT",
   "menu": {
     "home": "Beranda",
     "groom": "Pria",
